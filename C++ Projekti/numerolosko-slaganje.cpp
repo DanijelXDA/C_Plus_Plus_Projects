@@ -70,9 +70,10 @@ int main(void)
     /* KRAJ TEST ISPISA */
 
     float slaganje = ( (float)procSlaganjaO1 / (float)procSlaganjaO2)  * 100 ; // Cast numbers to float
-
-    if( slaganje > 100.)
+    
+    do {
         slaganje -= 100.;
+    } while( slaganje > 100.);
 
     cout << endl << "Procenat slaganja osoba " << ime1 << " i " << ime2 << " je: ";
     cout << slaganje << "%" << endl;
