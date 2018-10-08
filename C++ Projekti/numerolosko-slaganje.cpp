@@ -64,11 +64,6 @@ int main(void)
     // Drugo računanje
     procSlaganjaO2 = racunanjeStringToZbir(pok2);
 
-    /* Test ispis
-    cout << endl << procSlaganjaO1;
-    cout << endl << procSlaganjaO2;
-    /* KRAJ TEST ISPISA */
-
     float slaganje = ( (float)procSlaganjaO1 / (float)procSlaganjaO2)  * 100 ; // Cast numbers to float
     
     do {
