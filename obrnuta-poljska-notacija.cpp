@@ -17,6 +17,11 @@ int main(void)
   
   cout << "Kalkulator: Obrnuta poljska notacaija" << endl;
   
+  while(true) // Beskonacna petlja
+  {
+    // Body
+  }
+  
   return 0;
   
 }
