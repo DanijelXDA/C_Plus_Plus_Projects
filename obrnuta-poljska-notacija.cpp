@@ -93,5 +93,7 @@ void izvodjenjeOperatora(const string& unos, stack<double>& stek)
         rezultat = vrednostLevo / vrednostDesno;
     }
   
+  cout << "\tRezultat: " << rezultat << endl;
+  
   return;
 }
