@@ -24,6 +24,14 @@ int main(void)
     
     // Uzimanje unosa
         cin >> unos;
+    
+    // Provera da li je broj
+        double broj;
+
+        if( istringstream(unos) >> broj ) // Kreiranje novog objekta
+        {
+            stek.push(broj); // Ubacivanje u stek
+        }
   }
   
   return 0;
