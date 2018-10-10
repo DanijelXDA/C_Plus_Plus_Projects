@@ -19,7 +19,8 @@ int main(void)
   
   while(true) // Beskonacna petlja
   {
-    // Body
+    // Prikaz zahteva
+        cout << ">> ";
   }
   
   return 0;
