@@ -65,3 +65,9 @@ bool daLiJeOperator(const string& unos)
     }
     return false;
 }
+
+void izvodjenjeOperatora(const string& unos, stack<double>& stek)
+{
+  
+  return;
+}
