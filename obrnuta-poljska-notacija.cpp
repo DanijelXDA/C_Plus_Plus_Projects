@@ -94,6 +94,7 @@ void izvodjenjeOperatora(const string& unos, stack<double>& stek)
     }
   
   cout << "\tRezultat: " << rezultat << endl;
+  stek.push(rezultat);
   
   return;
 }
