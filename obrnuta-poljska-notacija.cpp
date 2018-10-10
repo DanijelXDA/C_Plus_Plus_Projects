@@ -14,7 +14,9 @@ int main(void)
 {
   stack <double> stek; // Stek
   string unos;
-
+  
+  cout << "Kalkulator: Obrnuta poljska notacaija" << endl;
+  
   return 0;
   
 }
