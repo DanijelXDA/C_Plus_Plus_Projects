@@ -13,6 +13,7 @@ void izvodjenjeOperatora(const string& , stack<double>&);
 int main(void)
 {
   stack <double> stek; // Stek
+  string unos;
 
   return 0;
   
