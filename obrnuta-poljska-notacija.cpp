@@ -42,6 +42,10 @@ int main(void)
         {
             return 0;
         }
+         else
+        {
+            cout << endl << "Unos nije vazeci!" << endl;
+        }
   }
   
   return 0;
