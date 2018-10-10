@@ -5,6 +5,9 @@
 
 using namespace std;
 
+// Prototip funkcije
+bool daLiJeOperator(const string&);
+
 int main(void)
 {
 
