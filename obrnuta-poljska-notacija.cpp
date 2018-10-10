@@ -37,6 +37,11 @@ int main(void)
         {
             izvodjenjeOperatora(unos, stek);
         }
+        // Prekid rada programa
+        else if( unos == "q" )
+        {
+            return 0;
+        }
   }
   
   return 0;
