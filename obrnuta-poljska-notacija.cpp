@@ -70,5 +70,8 @@ void izvodjenjeOperatora(const string& unos, stack<double>& stek)
 {
   double vrednostLevo, vrednostDesno, rezultat;
   
+  vrednostDesno = stek.top();
+    stek.pop();
+  
   return;
 }
