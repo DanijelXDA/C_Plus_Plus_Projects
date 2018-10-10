@@ -32,6 +32,11 @@ int main(void)
         {
             stek.push(broj); // Ubacivanje u stek
         }
+        // Provera da li je operator
+        else if( daLiJeOperator(unos) )
+        {
+            izvodjenjeOperatora(unos, stek);
+        }
   }
   
   return 0;
