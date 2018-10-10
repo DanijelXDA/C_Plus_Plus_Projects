@@ -12,20 +12,20 @@ void izvodjenjeOperatora(const string& , stack<double>&);
 
 int main(void)
 {
-  stack <double> stek; // Stek
-  string unos;
-  
-  cout << "Kalkulator: Obrnuta poljska notacaija" << endl;
-  
-  while(true) // Beskonacna petlja
-  {
-    // Prikaz zahteva
+    stack <double> stek; // Stek
+    string unos;
+
+    cout << "Kalkulator: Obrnuta poljska notacaija" << endl;
+
+    while(true) // Beskonacna petlja
+    {
+        // Prikaz zahteva
         cout << ">> ";
-    
-    // Uzimanje unosa
+
+        // Uzimanje unosa
         cin >> unos;
-    
-    // Provera da li je broj
+
+        // Provera da li je broj
         double broj;
 
         if( istringstream(unos) >> broj ) // Kreiranje novog objekta
@@ -42,14 +42,14 @@ int main(void)
         {
             return 0;
         }
-         else
+        // Pogresan unos (NEVAZEÆI UNOS)
+        else
         {
             cout << endl << "Unos nije vazeci!" << endl;
         }
-  }
-  
-  return 0;
-  
+    }
+
+    return 0;
 }
 
 bool daLiJeOperator(const string& unos)
@@ -68,15 +68,15 @@ bool daLiJeOperator(const string& unos)
 
 void izvodjenjeOperatora(const string& unos, stack<double>& stek)
 {
-  double vrednostLevo, vrednostDesno, rezultat;
-  
-  vrednostDesno = stek.top();
+    double vrednostLevo, vrednostDesno, rezultat;
+
+    vrednostDesno = stek.top();
     stek.pop();
-  
-      vrednostLevo = stek.top();
+
+    vrednostLevo = stek.top();
     stek.pop();
-  
-  if( unos == "-" )
+
+    if( unos == "-" )
     {
         rezultat = vrednostLevo - vrednostDesno;
     }
@@ -92,9 +92,9 @@ void izvodjenjeOperatora(const string& unos, stack<double>& stek)
     {
         rezultat = vrednostLevo / vrednostDesno;
     }
-  
-  cout << "\tRezultat: " << rezultat << endl;
-  stek.push(rezultat);
-  
-  return;
+
+    cout << "\tRezultat: " << rezultat << endl;
+    stek.push(rezultat);
+
+    return;
 }
