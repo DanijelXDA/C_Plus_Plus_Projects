@@ -7,6 +7,8 @@ using namespace std;
 
 // Prototip funkcije
 bool daLiJeOperator(const string&);
+// Prototip funkcije
+void izvodjenjeOperatora(const string& , stack<double>&);
 
 int main(void)
 {
