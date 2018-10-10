@@ -76,6 +76,22 @@ void izvodjenjeOperatora(const string& unos, stack<double>& stek)
       vrednostLevo = stek.top();
     stek.pop();
   
+  if( unos == "-" )
+    {
+        rezultat = vrednostLevo - vrednostDesno;
+    }
+    else if( unos == "+" )
+    {
+        rezultat = vrednostLevo + vrednostDesno;
+    }
+    else if( unos == "*" )
+    {
+        rezultat = vrednostLevo * vrednostDesno;
+    }
+    else
+    {
+        rezultat = vrednostLevo / vrednostDesno;
+    }
   
   return;
 }
