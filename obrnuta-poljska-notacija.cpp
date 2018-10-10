@@ -68,6 +68,7 @@ bool daLiJeOperator(const string& unos)
 
 void izvodjenjeOperatora(const string& unos, stack<double>& stek)
 {
+  double vrednostLevo, vrednostDesno, rezultat;
   
   return;
 }
