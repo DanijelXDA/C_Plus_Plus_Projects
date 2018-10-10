@@ -21,6 +21,9 @@ int main(void)
   {
     // Prikaz zahteva
         cout << ">> ";
+    
+    // Uzimanje unosa
+        cin >> unos;
   }
   
   return 0;
