@@ -23,7 +23,7 @@ class Broj {
 
             return;
         }
-        int najveciOdTriBrojaV1()
+        int najmanjiOdTriBrojaV1()
         {
             int b1 = broj1, b2 = broj2, b3 = broj3;
 
@@ -39,7 +39,7 @@ class Broj {
 
             return minimum;
         }
-        int najveciOdTriBrojaV2()
+        int najmanjiOdTriBrojaV2()
         {
             int b1 = broj1, b2 = broj2, b3 = broj3;
             int m;
@@ -55,8 +55,8 @@ int main(void)
 
     b.unosBrojeva();
 
-    cout << endl << "Najmanji broj je: " << b.najveciOdTriBrojaV1();
-    cout << endl << "Najmanji broj je: " << b.najveciOdTriBrojaV2();
+    cout << endl << "Najmanji broj je: " << b.najmanjiOdTriBrojaV1();
+    cout << endl << "Najmanji broj je: " << b.najmanjiOdTriBrojaV2();
 
     return 0;
 }
