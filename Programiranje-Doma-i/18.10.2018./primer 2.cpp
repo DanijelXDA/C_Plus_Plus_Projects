@@ -29,9 +29,9 @@ class Broj {
 
             int minimum;
 
-            if(b1 < b2)
-                minimum = b1;
-            else
+            minimum = b1;
+            
+            if(b2 < minimum)
                 minimum = b2;
 
             if(b3 < minimum)
