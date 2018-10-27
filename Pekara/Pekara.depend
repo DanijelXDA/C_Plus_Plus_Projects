@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1540671923 source:c:\users\danijel jovanoviæ\desktop\pekara\main.cpp
+	"Logovanje.hpp"
+	"Magacin.hpp"
+
+1540675058 c:\users\danijel jovanoviæ\desktop\pekara\magacin.hpp
+	"Logovanje.hpp"
+	<string>
+
+1540674132 c:\users\danijel jovanoviæ\desktop\pekara\logovanje.hpp
+	<iostream>
+	"Meni.hpp"
+
+1540675081 c:\users\danijel jovanoviæ\desktop\pekara\meni.hpp
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	"Magacin.hpp"
+
