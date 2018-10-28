@@ -16,6 +16,7 @@ class Magacin {
         void sadrzajMagacina();
         void dodavanjeUMagacin();
         void izbacivanjeIzMagacina();
+        void azuriranjeSirovine();
 };
 
 Magacin::Magacin() {
@@ -122,4 +123,25 @@ void Magacin::izbacivanjeIzMagacina() {
     return;
 }
 
+void Magacin::azuriranjeSirovine() {
+
+    int ID;
+
+    cout << "********************************************************************************" << endl;
+    cout << "\t\t\tAzuriranje sirovine iz magacina!" << endl << endl;
+    cout << "********************************************************************************" << endl;
+
+    cout << endl << "Unesite ID sirovine koju azurirate: ";
+    cin >> ID;
+
+    cout << endl << "Azuriranje imena sirovine: ";
+    cin.ignore();
+    getline(cin, imeSirovine[ID - 1]);
+
+    cout << endl << "Azuriranje kolicine sirovine u magacinu: ";
+    cout << endl << "Unesite novu kolicinu sirovine: ";
+    cin >> kolicinaSirovine[ID - 1];
+
+    return;
+}
 #endif // MAGACIN_HPP_INCLUDED
