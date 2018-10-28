@@ -110,8 +110,8 @@ void Magacin::izbacivanjeIzMagacina() {
 
     for(int i = ID - 1; i < 100; i++) {
         if(imeSirovine[i] != "NEMA") {
-            imeSirovine[i] = imeSirovine[ID];
-            kolicinaSirovine[i] = kolicinaSirovine[ID];
+            imeSirovine[i] = imeSirovine[i + 1];
+            kolicinaSirovine[i] = kolicinaSirovine[i + 1];
         }
         else {
             imeSirovine[i] = "NEMA";
