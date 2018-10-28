@@ -34,25 +34,27 @@ Magacin::Magacin() {
 void Magacin::sadrzajMagacina() {
     system("cls");
 
-    int prvoPojavljivanje = 0;
+    int poruka = 1; // Samo jedan ispis
 
     for(int i = 0; i < 100; i++) {
-        if(i == 99 && imeSirovine[99] == "NEMA")
+
+        unsigned prazno = 0;
+        if(prazno == 99)
             cout << endl << endl << "\t\t\t\tMAGACIN JE PRAZAN!" << endl << endl;
 
-        if( prvoPojavljivanje == 0 && imeSirovine[0] != "NEMA")
+        if(poruka) {
             cout << "U magacinu se nalaze sledece sirovine: " << endl;
+            poruka = 0;
+        }
 
         if(imeSirovine[i] != "NEMA") {
-            prvoPojavljivanje++;
             cout << endl << endl << "ID: " << ID[i];
             cout << endl << "Sirovina: " << imeSirovine[i] << endl;
             cout << "Kolicina: " << kolicinaSirovine[i] << endl;
             cout << "Jedinica mere: " << jedinicaMere[i];
         }
         else {
-            cout << "";
-            break;
+            prazno++;
         }
     }
 
