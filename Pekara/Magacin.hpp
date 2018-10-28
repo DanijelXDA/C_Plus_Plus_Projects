@@ -40,7 +40,7 @@ void Magacin::sadrzajMagacina() {
         if(i == 99 && imeSirovine[99] == "NEMA")
             cout << endl << endl << "\t\t\t\tMAGACIN JE PRAZAN!" << endl << endl;
 
-        if( prvoPojavljivanje == 0 )
+        if( prvoPojavljivanje == 0 && imeSirovine[0] != "NEMA")
             cout << "U magacinu se nalaze sledece sirovine: " << endl;
 
         if(imeSirovine[i] != "NEMA") {
