@@ -15,6 +15,7 @@ class Magacin {
         Magacin();
         void sadrzajMagacina();
         void dodavanjeUMagacin();
+        void izbacivanjeIzMagacina();
 };
 
 Magacin::Magacin() {
@@ -39,7 +40,7 @@ void Magacin::sadrzajMagacina() {
         if(i == 99 && imeSirovine[99] == "NEMA")
             cout << endl << endl << "\t\t\t\tMAGACIN JE PRAZAN!" << endl << endl;
 
-        if( prvoPojavljivanje == 1 )
+        if( prvoPojavljivanje == 0 )
             cout << "U magacinu se nalaze sledece sirovine: " << endl;
 
         if(imeSirovine[i] != "NEMA") {
@@ -94,4 +95,29 @@ void Magacin::dodavanjeUMagacin() {
 
     return;
 }
+
+void Magacin::izbacivanjeIzMagacina() {
+    int ID;
+
+    cout << "********************************************************************************" << endl;
+    cout << "\t\t\tIzbacujete sirovinu iz magacina!" << endl << endl;
+    cout << "********************************************************************************" << endl;
+
+    cout << endl << "Unesite ID sirovine koju izbacujete: ";
+    cin >> ID;
+
+    for(int i = ID - 1; i < 100; i++) {
+        if(imeSirovine[i] != "NEMA") {
+            imeSirovine[i] = imeSirovine[ID];
+            kolicinaSirovine[i] = kolicinaSirovine[ID];
+        }
+        else {
+            imeSirovine[i] = "NEMA";
+            kolicinaSirovine[i] = 0.0;
+        }
+    }
+
+    return;
+}
+
 #endif // MAGACIN_HPP_INCLUDED
