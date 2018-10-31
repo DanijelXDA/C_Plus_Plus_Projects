@@ -2,6 +2,7 @@
 #define MAGACIN_HPP_INCLUDED
 
 #include "Logovanje.hpp"
+#include "Proizvodi.hpp"
 #include <string>
 
 class Magacin {
@@ -133,6 +134,13 @@ void Magacin::azuriranjeSirovine() {
 
     cout << endl << "Unesite ID sirovine koju azurirate: ";
     cin >> ID;
+
+    while(imeSirovine[ID - 1] == "NEMA") {
+        cout << endl << endl << "Na unetoj pozicije ne postoji sirovina!";
+        cout << endl << "Unesite ID sirovine koju azurirate: ";
+        cin >> ID;
+    }
+
 
     cout << endl << "Azuriranje imena sirovine: ";
     cin.ignore();
