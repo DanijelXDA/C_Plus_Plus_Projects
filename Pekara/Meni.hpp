@@ -4,8 +4,10 @@
 #include <iostream>
 #include <cstdlib>
 #include <cstdio>
-using namespace std;
 #include "Magacin.hpp"
+
+using namespace std;
+
 
 void prikaziMeni() {
 
@@ -35,6 +37,11 @@ void prikaziMeni() {
         cout << endl << endl;
 
         switch(izbor) {
+            case 0: {
+                cout << "Napustate program......";
+                kraj = false;
+                break;
+            }
             case 1: {
                 system("cls");
                 m.sadrzajMagacina();
@@ -43,6 +50,16 @@ void prikaziMeni() {
             case 2: {
                 system("cls");
                 m.dodavanjeUMagacin();
+                break;
+            }
+            case 3: {
+                system("cls");
+                m.izbacivanjeIzMagacina();
+                break;
+            }
+            case 4: {
+                system("cls");
+                m.azuriranjeSirovine();
                 break;
             }
 

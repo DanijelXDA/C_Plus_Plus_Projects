@@ -34,6 +34,8 @@
 		</Compiler>
 		<Unit filename="Logovanje.hpp" />
 		<Unit filename="Magacin.hpp" />
+		<Unit filename="Meni.hpp" />
+		<Unit filename="Proizvodi.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
