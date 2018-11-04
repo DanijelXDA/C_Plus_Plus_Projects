@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Pocetna</class>
+ <widget class="QMainWindow" name="Pocetna">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuProizvod">
+    <property name="title">
+     <string>Proizvod</string>
+    </property>
+    <addaction name="actionUnos"/>
+    <addaction name="actionBrisanje"/>
+    <addaction name="actionIzmena"/>
+   </widget>
+   <widget class="QMenu" name="menuMagacin">
+    <property name="title">
+     <string>Magacin</string>
+    </property>
+    <addaction name="actionUnos_2"/>
+    <addaction name="actionBrisanje_2"/>
+    <addaction name="actionIzmena_2"/>
+   </widget>
+   <widget class="QMenu" name="menuDobavlja_i">
+    <property name="title">
+     <string>Dobavljači</string>
+    </property>
+    <addaction name="actionUnos_3"/>
+    <addaction name="actionIzmena_3"/>
+    <addaction name="actionBrisanje_3"/>
+   </widget>
+   <widget class="QMenu" name="menuO_programu">
+    <property name="title">
+     <string>O programu</string>
+    </property>
+    <addaction name="actionVerzija_2"/>
+    <addaction name="actionZatvori_prozor_2"/>
+   </widget>
+   <addaction name="menuProizvod"/>
+   <addaction name="menuMagacin"/>
+   <addaction name="menuDobavlja_i"/>
+   <addaction name="menuO_programu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionUnos">
+   <property name="text">
+    <string>Unos</string>
+   </property>
+  </action>
+  <action name="actionBrisanje">
+   <property name="text">
+    <string>Brisanje</string>
+   </property>
+  </action>
+  <action name="actionIzmena">
+   <property name="text">
+    <string>Izmena</string>
+   </property>
+  </action>
+  <action name="actionUnos_2">
+   <property name="text">
+    <string>Unos</string>
+   </property>
+  </action>
+  <action name="actionBrisanje_2">
+   <property name="text">
+    <string>Brisanje</string>
+   </property>
+  </action>
+  <action name="actionIzmena_2">
+   <property name="text">
+    <string>Izmena</string>
+   </property>
+  </action>
+  <action name="actionUnos_3">
+   <property name="text">
+    <string>Unos</string>
+   </property>
+  </action>
+  <action name="actionIzmena_3">
+   <property name="text">
+    <string>Izmena</string>
+   </property>
+  </action>
+  <action name="actionBrisanje_3">
+   <property name="text">
+    <string>Brisanje</string>
+   </property>
+  </action>
+  <action name="actionVerzija">
+   <property name="text">
+    <string>Verzija 1.0</string>
+   </property>
+  </action>
+  <action name="actionZatvori_prozor">
+   <property name="text">
+    <string>Zatvori prozor</string>
+   </property>
+  </action>
+  <action name="actionVerzija_2">
+   <property name="text">
+    <string>Verzija</string>
+   </property>
+  </action>
+  <action name="actionZatvori_prozor_2">
+   <property name="text">
+    <string>Zatvori prozor</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
