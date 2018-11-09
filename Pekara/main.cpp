@@ -1,5 +1,5 @@
-#include "Logovanje.hpp"
-#include "Magacin.hpp"
+#include "Headers/Logovanje.hpp"
+#include "Headers/Magacin.hpp"
 
 int main(void)
 {

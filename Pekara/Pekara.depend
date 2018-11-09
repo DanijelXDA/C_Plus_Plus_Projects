@@ -1,19 +1,39 @@
 # depslib dependency file v1.0
-1540671923 source:c:\users\danijel jovanoviæ\desktop\pekara\main.cpp
-	"Logovanje.hpp"
-	"Magacin.hpp"
+1541747629 source:c:\users\danijel jovanoviæ\desktop\pekara\main.cpp
+	"Headers/Logovanje.hpp"
+	"Headers/Magacin.hpp"
 
-1540675058 c:\users\danijel jovanoviæ\desktop\pekara\magacin.hpp
+1541512336 c:\users\danijel jovanoviæ\desktop\pekara\magacin.hpp
 	"Logovanje.hpp"
+	"Proizvodi.hpp"
 	<string>
 
-1540674132 c:\users\danijel jovanoviæ\desktop\pekara\logovanje.hpp
+1540666932 c:\users\danijel jovanoviæ\desktop\pekara\logovanje.hpp
 	<iostream>
 	"Meni.hpp"
 
-1540675081 c:\users\danijel jovanoviæ\desktop\pekara\meni.hpp
+1540731168 c:\users\danijel jovanoviæ\desktop\pekara\meni.hpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
 	"Magacin.hpp"
+
+1540731206 c:\users\danijel jovanoviæ\desktop\pekara\proizvodi.hpp
+
+1540666932 c:\users\danijel jovanoviæ\desktop\pekara\headers\logovanje.hpp
+	<iostream>
+	"Meni.hpp"
+
+1541747369 c:\users\danijel jovanoviæ\desktop\pekara\headers\meni.hpp
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	"Magacin.hpp"
+
+1541748416 c:\users\danijel jovanoviæ\desktop\pekara\headers\magacin.hpp
+	"Logovanje.hpp"
+	"Proizvodi.hpp"
+	<string>
+
+1540731206 c:\users\danijel jovanoviæ\desktop\pekara\headers\proizvodi.hpp
 
