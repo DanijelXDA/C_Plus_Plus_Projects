@@ -45,7 +45,6 @@ bool Magacin::sadrzajMagacina() {
         {
             cout << endl << endl << "\t\t\t\tMAGACIN JE PRAZAN!" << endl << endl;
             return true; // Potvrdno - MAGACIN JE PRAZAN
-            break; // Magacin je prazan prekid ...
         }
         else if(poruka) {
             cout << "U magacinu se nalaze sledece sirovine: " << endl;
