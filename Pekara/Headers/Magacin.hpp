@@ -14,7 +14,8 @@ class Magacin {
         bool naStanju;
     public:
         Magacin();
-        bool sadrzajMagacina();
+        bool proveraStanjaUMagacinu();
+        void sadrzajMagacina();
         void dodavanjeUMagacin();
         void izbacivanjeIzMagacina();
         void azuriranjeSirovine();
@@ -33,21 +34,24 @@ Magacin::Magacin() {
     naStanju = false;
 }
 
-bool Magacin::sadrzajMagacina() {
+bool Magacin::proveraStanjaUMagacinu()
+{
+        // Magacin je prazan AKO JE PRVO MESTO PRAZNO
+        if(imeSirovine[0] == "NEMA")
+            return true; // Potvrdno - MAGACIN JE PRAZAN
+        else
+            return false; // Magacin nije prazan
+}
+void Magacin::sadrzajMagacina() {
     system("cls");
 
     int poruka = 1; // Samo jedan ispis
-    bool prazanMagacin = false; // NIJE PRAZAN - PODRAZUMEVANO
 
     for(int i = 0; i < 100; i++) {
 
         // Magacin je prazan AKO JE PRVO MESTO PRAZNO
-        if(imeSirovine[0] == "NEMA")
-        {
+        if( proveraStanjaUMagacinu() )
             cout << endl << endl << "\t\t\t\tMAGACIN JE PRAZAN!" << endl << endl;
-            prazanMagacin = true; // Potvrdno - MAGACIN JE PRAZAN
-            break;
-        }
         else if(poruka) {
             cout << "U magacinu se nalaze sledece sirovine: " << endl;
             poruka = 0;
@@ -60,9 +64,7 @@ bool Magacin::sadrzajMagacina() {
             cout << "Jedinica mere: " << jedinicaMere[i];
         }
     }
-
-    return prazanMagacin;
-
+    return;
 }
 
 void Magacin::dodavanjeUMagacin() {
@@ -103,10 +105,8 @@ void Magacin::dodavanjeUMagacin() {
 }
 
 void Magacin::izbacivanjeIzMagacina() {
-    Magacin m;
-    bool prazan = m.sadrzajMagacina();
 
-    if(prazan) // BUG: Magacin je uvek prazan!?
+    if( proveraStanjaUMagacinu() ) // BUG: Magacin je uvek prazan!?
         cout << endl << "Magacin je prazan! Izbacivanje onemoguceno!" << endl;
     else {
         int ID;
@@ -134,9 +134,8 @@ void Magacin::izbacivanjeIzMagacina() {
 }
 
 void Magacin::azuriranjeSirovine() {
-    Magacin m;
 
-    if(m.sadrzajMagacina())
+    if( proveraStanjaUMagacinu() )
         cout << endl << "Magacin je prazan! Azuriranje onemoguceno" << endl;
     else {
 
