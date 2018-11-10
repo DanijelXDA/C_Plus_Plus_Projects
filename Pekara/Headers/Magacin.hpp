@@ -1,27 +1,29 @@
-#ifndef MAGACIN_HPP_INCLUDED
+ #ifndef MAGACIN_HPP_INCLUDED
 #define MAGACIN_HPP_INCLUDED
 
 #include "Logovanje.hpp"
 #include "Proizvodi.hpp"
 #include <string>
 
-class Magacin {
-    private:
-        int ID[100];
-        string imeSirovine[100];
-        float kolicinaSirovine[100]; // Za sto elemenata
-        string jedinicaMere[100];
-        bool naStanju;
-    public:
-        Magacin();
-        bool proveraStanjaUMagacinu();
-        void sadrzajMagacina();
-        void dodavanjeUMagacin();
-        void izbacivanjeIzMagacina();
-        void azuriranjeSirovine();
+class Magacin
+{
+private:
+    int ID[100];
+    string imeSirovine[100];
+    float kolicinaSirovine[100]; // Za sto elemenata
+    string jedinicaMere[100];
+    bool naStanju;
+public:
+    Magacin();
+    bool proveraStanjaUMagacinu();
+    void sadrzajMagacina();
+    void dodavanjeUMagacin();
+    void izbacivanjeIzMagacina();
+    void azuriranjeSirovine();
 };
 
-Magacin::Magacin() {
+Magacin::Magacin()
+{
 
     for(int i = 0; i < 100; i++)
     {
@@ -36,28 +38,26 @@ Magacin::Magacin() {
 
 bool Magacin::proveraStanjaUMagacinu()
 {
-        // Magacin je prazan AKO JE PRVO MESTO PRAZNO
-        if(imeSirovine[0] == "NEMA")
-            return true; // Potvrdno - MAGACIN JE PRAZAN
-        else
-            return false; // Magacin nije prazan
+    // Magacin je prazan AKO JE PRVO MESTO PRAZNO
+    if(imeSirovine[0] == "NEMA")
+        return true; // Potvrdno - MAGACIN JE PRAZAN
+    else
+        return false; // Magacin nije prazan
 }
-void Magacin::sadrzajMagacina() {
+void Magacin::sadrzajMagacina()
+{
     system("cls");
 
-    int poruka = 1; // Samo jedan ispis
+    // Magacin je prazan AKO JE PRVO MESTO PRAZNO
+    if( proveraStanjaUMagacinu() )
+        cout << endl << endl << "\t\t\t\tMAGACIN JE PRAZAN!" << endl << endl;
+    else
+        cout << "U magacinu se nalaze sledece sirovine: " << endl;
 
-    for(int i = 0; i < 100; i++) {
-
-        // Magacin je prazan AKO JE PRVO MESTO PRAZNO
-        if( proveraStanjaUMagacinu() )
-            cout << endl << endl << "\t\t\t\tMAGACIN JE PRAZAN!" << endl << endl;
-        else if(poruka) {
-            cout << "U magacinu se nalaze sledece sirovine: " << endl;
-            poruka = 0;
-        }
-
-        if(imeSirovine[i] != "NEMA") {
+    for(int i = 0; i < 100; i++)
+    {
+        if(imeSirovine[i] != "NEMA")
+        {
             cout << endl << endl << "ID: " << ID[i];
             cout << endl << "Sirovina: " << imeSirovine[i] << endl;
             cout << "Kolicina: " << kolicinaSirovine[i] << endl;
@@ -67,7 +67,8 @@ void Magacin::sadrzajMagacina() {
     return;
 }
 
-void Magacin::dodavanjeUMagacin() {
+void Magacin::dodavanjeUMagacin()
+{
     string sirovina;
     string jedMere;
     float kolicina;
@@ -89,7 +90,8 @@ void Magacin::dodavanjeUMagacin() {
 
     // Setovanje
     for(int i = 0; i < 100; i++) // Trazi se prvo slobodno mesto
-        if(imeSirovine[i] == "NEMA"){
+        if(imeSirovine[i] == "NEMA")
+        {
             imeSirovine[i] = sirovina;
             kolicinaSirovine[i] = kolicina;
             jedinicaMere[i] = jedMere;
@@ -99,16 +101,18 @@ void Magacin::dodavanjeUMagacin() {
             break;
         }
 
-        system("cls");
+    system("cls");
 
     return;
 }
 
-void Magacin::izbacivanjeIzMagacina() {
+void Magacin::izbacivanjeIzMagacina()
+{
 
-    if( proveraStanjaUMagacinu() ) // BUG: Magacin je uvek prazan!?
+    if( proveraStanjaUMagacinu() )
         cout << endl << "Magacin je prazan! Izbacivanje onemoguceno!" << endl;
-    else {
+    else
+    {
         int ID;
 
         cout << "********************************************************************************" << endl;
@@ -118,12 +122,23 @@ void Magacin::izbacivanjeIzMagacina() {
         cout << endl << "Unesite ID sirovine koju izbacujete: ";
         cin >> ID;
 
-        for(int i = ID - 1; i < 100; i++) { // Rotiranje niza ulevo za jedno mesto
-            if(imeSirovine[i] != "NEMA") {
+        while(imeSirovine[ID - 1] == "NEMA" && ID < 1)
+        {
+            cout << endl << "ID koji ste uneli ne sadrzi nijednu sirovinu!" << endl;
+            cout << endl << "Unesite ID sirovine koju izbacujete: ";
+            cin >> ID;
+        }
+
+
+        for(int i = ID - 1; i < 100; i++)   // Rotiranje niza ulevo za jedno mesto
+        {
+            if(imeSirovine[i] != "NEMA")
+            {
                 imeSirovine[i] = imeSirovine[i + 1];
                 kolicinaSirovine[i] = kolicinaSirovine[i + 1];
             }
-            else {
+            else
+            {
                 imeSirovine[i] = "NEMA";
                 kolicinaSirovine[i] = 0.0;
             }
@@ -133,11 +148,13 @@ void Magacin::izbacivanjeIzMagacina() {
     return;
 }
 
-void Magacin::azuriranjeSirovine() {
+void Magacin::azuriranjeSirovine()
+{
 
     if( proveraStanjaUMagacinu() )
         cout << endl << "Magacin je prazan! Azuriranje onemoguceno" << endl;
-    else {
+    else
+    {
 
         int ID;
 
@@ -148,12 +165,15 @@ void Magacin::azuriranjeSirovine() {
         cout << endl << "Unesite ID sirovine koju azurirate: ";
         cin >> ID;
 
-        if(ID <= 0) {
-            cout << endl << "Ne postoji sirovina sa nultim ID-om! (ID++)" << endl;
-            ID = 1;
-        }
+        // NEMA NEGATIVNOG ID!
+        do {
+            cout << endl << "Unesite ID sirovine koju azurirate: ";
+            cin >> ID;
+        } while(ID < 1);
 
-        while(imeSirovine[ID - 1] == "NEMA") {
+
+        while(imeSirovine[ID - 1] == "NEMA")
+        {
             cout << endl << endl << "Na unetoj pozicije ne postoji sirovina!";
             cout << endl << "Unesite ID sirovine koju azurirate: ";
             cin >> ID;
