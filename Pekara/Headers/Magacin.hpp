@@ -21,6 +21,7 @@ class Magacin
         void izbacivanjeIzMagacina();
         void azuriranjeSirovine();
         bool upisUMagacinTXT();
+        bool citanjeUMagacinTXT();
 };
 
 #endif // MAGACIN_HPP_INCLUDED

@@ -35,41 +35,6 @@ void Magacin::sadrzajMagacina()
     else
         cout << "U magacinu se nalaze sledece sirovine: " << endl;
 
-    //load the text file and put it into a single string:
-    fstream magacin("Magacin.txt");
-    stringstream unos;
-
-    unos << magacin.rdbuf();
-
-    string test = unos.str();
-    // cout << test << endl << endl;
-
-    //create variables that will act as "cursors". we'll take everything between them.
-    size_t pos1 = 0;
-    size_t pos2;
-
-    //create the array to store the strings.
-    string str[100];
-
-    for (int x  = 0; x <= 100; x++){
-        pos2 = test.find(" ", pos1); //search for the bar "|". pos2 will be where the bar was found.
-        str[x] = test.substr(pos1, (pos2 - pos1)); //make a substring, wich is nothing more
-                                              //than a copy of a fragment of the big string.
-        // cout << str[x] << endl; // ISPIS
-        pos1 = pos2 + 1; // sets pos1 to the next character after pos2.
-                         //so, it can start searching the next bar |.
-    }
-
-    // UPIS U Magacin.txt
-    for(int i = 0; i < 100; i++)
-    {
-        magacin << ID[i];
-        magacin << " " << imeSirovine[i];
-        magacin << " " << kolicinaSirovine[i];
-        magacin << " " << jedinicaMere[i] << endl;
-    }
-    magacin.close(); // Zatvranje datoteke
-
     // Citanje iz magacina
         for(int i = 0; i < 100; i++)
     {
@@ -114,12 +79,12 @@ void Magacin::dodavanjeUMagacin()
             kolicinaSirovine[i] = kolicina;
             jedinicaMere[i] = jedMere;
 
-            cout << endl << "SIROVINA JE DODATA U MAGACIN!" << endl;
-
             break;
         }
+    if( upisUMagacinTXT() )
+        cout << endl << "SIROVINA JE DODATA U MAGACIN!" << endl;
 
-    system("cls");
+    //system("cls");
 
     return;
 }
@@ -238,3 +203,42 @@ bool Magacin::upisUMagacinTXT()
     return uspesanUpis;
 
 }
+
+bool Magacin::citanjeUMagacinTXT()
+{
+    bool uspesanUpis = false;
+
+      //load the text file and put it into a single string:
+    fstream magacin("Magacin.txt");
+
+    if( magacin.is_open() )
+    {
+        stringstream unos;
+
+        unos << magacin.rdbuf();
+
+        string test = unos.str();
+
+        //create variables that will act as "cursors". we'll take everything between them.
+        size_t pos1 = 0;
+        size_t pos2;
+
+        //create the array to store the strings.
+        string str[100];
+
+        for (int x  = 0; x <= 100; x++){
+            pos2 = test.find(" ", pos1);                    //search for the bar " ". pos2 will be where the bar was found.
+            str[x] = test.substr(pos1, (pos2 - pos1));      //make a substring, wich is nothing more
+                                                            //than a copy of a fragment of the big string.
+            pos1 = pos2 + 1;                                // sets pos1 to the next character after pos2.
+                                                            //so, it can start searching the next space bar.
+        }
+        uspesanUpis = true;
+    }
+    else
+        cout << endl << "DATOTEKA NE POSTOJI!" << endl;
+
+    return uspesanUpis;
+
+}
+
