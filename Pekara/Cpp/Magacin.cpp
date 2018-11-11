@@ -13,8 +13,6 @@ Magacin::Magacin()
         kolicinaSirovine[i] = 0;
         jedinicaMere[i] = "NEMA";
     }
-
-    naStanju = false;
 }
 
 bool Magacin::proveraStanjaUMagacinu()

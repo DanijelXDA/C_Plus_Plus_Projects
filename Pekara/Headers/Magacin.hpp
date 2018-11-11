@@ -12,7 +12,6 @@ class Magacin
         string imeSirovine[100];
         float kolicinaSirovine[100]; // Za sto elemenata
         string jedinicaMere[100];
-        bool naStanju;
     public:
         Magacin();
         bool proveraStanjaUMagacinu();
