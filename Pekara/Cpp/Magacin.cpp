@@ -10,7 +10,7 @@ Magacin::Magacin()
     {
         ID[i] =  i + 1;
         imeSirovine[i] = "NEMA";
-        kolicinaSirovine[i] = 0;
+        kolicinaSirovine[i] = 0.0;
         jedinicaMere[i] = "NEMA";
     }
 }
@@ -244,4 +244,3 @@ bool Magacin::citanjeUMagacinTXT()
     return uspesanUpis;
 
 }
-
