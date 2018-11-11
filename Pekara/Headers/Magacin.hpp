@@ -20,7 +20,7 @@ class Magacin
         void dodavanjeUMagacin();
         void izbacivanjeIzMagacina();
         void azuriranjeSirovine();
-        friend string getImeSirovine(const Magacin, int);
+        bool upisUMagacinTXT();
 };
 
 #endif // MAGACIN_HPP_INCLUDED

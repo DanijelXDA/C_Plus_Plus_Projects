@@ -1,4 +1,5 @@
 #include "../Headers/Proizvodi.hpp"
+#include <fstream>
 
 Proizvodi::Proizvodi() // Prazan konstruktor
 {
@@ -18,7 +19,11 @@ Proizvodi::Proizvodi() // Prazan konstruktor
 
 void Proizvodi::dodavanjeProizvoda()
 {
+    Magacin m;
     string proizvod;
+    // Datotecni tok
+    ifstream citanjeMagacin;
+    citanjeMagacin.open("Magacin.txt", ios::in | ios::out);
 
     cout << "********************************************************************************" << endl;
     cout << "\t\t\tDodajete proizvod na listu!" << endl << endl;
@@ -29,12 +34,8 @@ void Proizvodi::dodavanjeProizvoda()
     cin.ignore(); // kao fflush()
     getline(cin, proizvod);
 
-    cout << "Unos kolicine potrebnog materijala za proizvod \" " << proizvod << "\" " << endl;
+    cout << "Unos kolicine potrebnog materijala za proizvod \"" << proizvod << "\" " << endl;
 
-   for(int i = 0; i < 100; i++)
-    {
-     //   cout << getImeSirovine(m, i) << endl;
-    }
 
     system("cls");
 

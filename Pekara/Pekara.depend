@@ -36,18 +36,22 @@
 	"Proizvodi.hpp"
 	<string>
 
-1541859068 c:\users\danijel jovanoviæ\desktop\pekara\headers\proizvodi.hpp
+1541859956 c:\users\danijel jovanoviæ\desktop\pekara\headers\proizvodi.hpp
 	"Magacin.hpp"
 
 1541859270 source:c:\users\danijel jovanoviæ\desktop\pekara\cpp\logovanje.cpp
 	"../Headers/Logovanje.hpp"
 
-1541859238 source:c:\users\danijel jovanoviæ\desktop\pekara\cpp\magacin.cpp
+1541937588 source:c:\users\danijel jovanoviæ\desktop\pekara\cpp\magacin.cpp
 	"../Headers/Magacin.hpp"
+	<fstream>
+	<sstream>
+	<string>
 
 1541859188 source:c:\users\danijel jovanoviæ\desktop\pekara\cpp\meni.cpp
 	"../Headers/Meni.hpp"
 
-1541859098 source:c:\users\danijel jovanoviæ\desktop\pekara\cpp\proizvodi.cpp
+1541933870 source:c:\users\danijel jovanoviæ\desktop\pekara\cpp\proizvodi.cpp
 	"../Headers/Proizvodi.hpp"
+	<fstream>
 
