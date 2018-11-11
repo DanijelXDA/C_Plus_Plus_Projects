@@ -103,7 +103,7 @@ void Magacin::izbacivanjeIzMagacina()
         cout << endl << "Unesite ID sirovine koju izbacujete: ";
         cin >> ID;
 
-        while(imeSirovine[ID - 1] == "NEMA" && ID < 1)
+        while( (ID < 1 || ID > 100) || imeSirovine[ID - 1] == "NEMA" )
         {
             cout << endl << "ID koji ste uneli ne sadrzi nijednu sirovinu!" << endl;
             cout << endl << "Unesite ID sirovine koju izbacujete: ";

@@ -31,7 +31,7 @@
 	"Magacin.hpp"
 	"Proizvodi.hpp"
 
-1541939863 c:\users\danijel jovanoviæ\desktop\pekara\headers\magacin.hpp
+1541941866 c:\users\danijel jovanoviæ\desktop\pekara\headers\magacin.hpp
 	"Logovanje.hpp"
 	"Proizvodi.hpp"
 	<string>
@@ -42,7 +42,7 @@
 1541859270 source:c:\users\danijel jovanoviæ\desktop\pekara\cpp\logovanje.cpp
 	"../Headers/Logovanje.hpp"
 
-1541941065 source:c:\users\danijel jovanoviæ\desktop\pekara\cpp\magacin.cpp
+1541941558 source:c:\users\danijel jovanoviæ\desktop\pekara\cpp\magacin.cpp
 	"../Headers/Magacin.hpp"
 	<fstream>
 	<sstream>
