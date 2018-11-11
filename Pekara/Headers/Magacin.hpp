@@ -7,7 +7,7 @@
 
 class Magacin
 {
-    protected:
+    private:
         int ID[100];
         string imeSirovine[100];
         float kolicinaSirovine[100]; // Za sto elemenata
