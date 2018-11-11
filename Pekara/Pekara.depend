@@ -42,7 +42,7 @@
 1541859270 source:c:\users\danijel jovanoviæ\desktop\pekara\cpp\logovanje.cpp
 	"../Headers/Logovanje.hpp"
 
-1541937588 source:c:\users\danijel jovanoviæ\desktop\pekara\cpp\magacin.cpp
+1541941065 source:c:\users\danijel jovanoviæ\desktop\pekara\cpp\magacin.cpp
 	"../Headers/Magacin.hpp"
 	<fstream>
 	<sstream>

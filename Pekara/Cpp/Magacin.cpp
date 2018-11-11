@@ -84,8 +84,6 @@ void Magacin::dodavanjeUMagacin()
     if( upisUMagacinTXT() )
         cout << endl << "SIROVINA JE DODATA U MAGACIN!" << endl;
 
-    //system("cls");
-
     return;
 }
 
@@ -119,6 +117,7 @@ void Magacin::izbacivanjeIzMagacina()
             {
                 imeSirovine[i] = imeSirovine[i + 1];
                 kolicinaSirovine[i] = kolicinaSirovine[i + 1];
+                jedinicaMere[i] = "NEMA";
             }
             else
             {
@@ -127,6 +126,9 @@ void Magacin::izbacivanjeIzMagacina()
             }
         }
     }
+
+    if( upisUMagacinTXT() )
+        cout << endl << "SIROVINA JE IZBACENA IZ MAGACINA!" << endl;
 
     return;
 }
@@ -171,6 +173,9 @@ void Magacin::azuriranjeSirovine()
         cout << endl << "Unesite novu kolicinu sirovine: ";
         cin >> kolicinaSirovine[ID - 1];
     }
+
+    if( upisUMagacinTXT() )
+        cout << endl << "SIROVINA U MAGACINU JE USPESNO AZURIRANA!" << endl;
 
     return;
 }
