@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1541843908 source:c:\users\danijel jovanoviæ\desktop\pekara\main.cpp
+1541956872 source:c:\users\danijel jovanoviæ\desktop\pekara\main.cpp
 	"Headers/Logovanje.hpp"
 	"Headers/Proizvodi.hpp"
 
@@ -31,18 +31,18 @@
 	"Magacin.hpp"
 	"Proizvodi.hpp"
 
-1541951925 c:\users\danijel jovanoviæ\desktop\pekara\headers\magacin.hpp
+1541966731 c:\users\danijel jovanoviæ\desktop\pekara\headers\magacin.hpp
 	"Logovanje.hpp"
 	"Proizvodi.hpp"
 	<string>
 
-1541859956 c:\users\danijel jovanoviæ\desktop\pekara\headers\proizvodi.hpp
+1541952774 c:\users\danijel jovanoviæ\desktop\pekara\headers\proizvodi.hpp
 	"Magacin.hpp"
 
 1541859270 source:c:\users\danijel jovanoviæ\desktop\pekara\cpp\logovanje.cpp
 	"../Headers/Logovanje.hpp"
 
-1541951908 source:c:\users\danijel jovanoviæ\desktop\pekara\cpp\magacin.cpp
+1542022175 source:c:\users\danijel jovanoviæ\desktop\pekara\cpp\magacin.cpp
 	"../Headers/Magacin.hpp"
 	<fstream>
 	<sstream>
@@ -51,7 +51,7 @@
 1541859188 source:c:\users\danijel jovanoviæ\desktop\pekara\cpp\meni.cpp
 	"../Headers/Meni.hpp"
 
-1541938071 source:c:\users\danijel jovanoviæ\desktop\pekara\cpp\proizvodi.cpp
+1541956644 source:c:\users\danijel jovanoviæ\desktop\pekara\cpp\proizvodi.cpp
 	"../Headers/Proizvodi.hpp"
 	<fstream>
 

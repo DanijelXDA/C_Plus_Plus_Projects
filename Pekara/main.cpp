@@ -7,6 +7,5 @@ int main(void)
     Logovanje admin;
     admin.ulogujSe();
 
-
     return 0;
 }

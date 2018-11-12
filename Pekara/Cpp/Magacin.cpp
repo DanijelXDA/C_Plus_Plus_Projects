@@ -27,6 +27,8 @@ void Magacin::sadrzajMagacina()
 {
     system("cls");
 
+    citanjeUMagacinTXT(); // Citanje iz magacina
+
     // Magacin je prazan AKO JE PRVO MESTO PRAZNO
     if( proveraStanjaUMagacinu() )
         cout << endl << endl << "\t\t\t\tMAGACIN JE PRAZAN!" << endl << endl;
@@ -44,6 +46,9 @@ void Magacin::sadrzajMagacina()
             cout << "Jedinica mere: " << jedinicaMere[i];
         }
     }
+    cout << jedinicaMere[0] << endl;
+    cout << jedinicaMere[2] << endl;
+    cout << jedinicaMere[99] << endl;
 
     return;
 }
@@ -226,15 +231,28 @@ bool Magacin::citanjeUMagacinTXT()
         size_t pos1 = 0;
         size_t pos2;
 
-        //create the array to store the strings.
-        string str[100];
-
-        for (int x  = 0; x <= 100; x++){
+        for (int x  = 0; x < 250; x++){
             pos2 = test.find(" ", pos1);                    //search for the bar " ". pos2 will be where the bar was found.
             str[x] = test.substr(pos1, (pos2 - pos1));      //make a substring, wich is nothing more
                                                             //than a copy of a fragment of the big string.
             pos1 = pos2 + 1;                                // sets pos1 to the next character after pos2.
                                                             //so, it can start searching the next space bar.
+        }
+
+        int i, j;
+        // Upis iz datoteke u polja klase magacin
+        for(i = j = 0; i < 100 && j < 300; i++, j += 3)
+        {
+            ID[i] = atoi( str[j].c_str() );
+            imeSirovine[i] = str[j + 1];
+            kolicinaSirovine[i] = atof( str[j + 2].c_str() );
+            jedinicaMere[i] = str[j + 3];
+
+            /*
+            0       1       2           3
+            ID      Ime     Kolicina    jedinicaMere
+            str[0]  str[1]  str[2]      str[3]
+            */
         }
         uspesanUpis = true;
     }
@@ -244,3 +262,4 @@ bool Magacin::citanjeUMagacinTXT()
     return uspesanUpis;
 
 }
+

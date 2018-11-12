@@ -12,6 +12,7 @@ class Proizvodi {
     public:
         Proizvodi();
         void dodavanjeProizvoda();
+        bool upisProizvodiTXT();
 };
 
 #endif // PROIZVODI_HPP_INCLUDED
