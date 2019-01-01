@@ -12,7 +12,6 @@ povrsinu jedne stranice kocke, i dijagonalu jedne stranice kocke.
 
 int main()
 {
-    // cout << "Shutting down..." << endl;
     Kocka k1;
     Kocka k2(3.5);
     Kocka k3(k2);
