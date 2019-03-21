@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GlavniProzor</class>
+ <widget class="QMainWindow" name="GlavniProzor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1090</width>
+    <height>716</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1090</width>
+    <height>716</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1090</width>
+    <height>716</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Aplikacija Pekara | Početna</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resursi.qrc">
+    <normaloff>:/Resursi/ikonice/bakery.png</normaloff>:/Resursi/ikonice/bakery.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QCalendarWidget" name="kalendar">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>290</y>
+      <width>511</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>501</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; font-style:italic;&quot;&gt;Dobro došli u aplikaciju Pekara!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Aplikaciju koristiti odabirom opcije iz menija &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;sa alatkama.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Kalendar:&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1090</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Shell Dlg 2</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <widget class="QMenu" name="menuMagacin">
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Magacin sirovina</string>
+    </property>
+    <addaction name="actionDodaj_u_magacin"/>
+    <addaction name="azuriranjeMagacin"/>
+    <addaction name="pregledMagacina"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="trebovanjeMagacin"/>
+   </widget>
+   <widget class="QMenu" name="menuMagacin_gotovih_proizvoda">
+    <property name="title">
+     <string>Magacin gotovih proizvoda</string>
+    </property>
+    <addaction name="DodajGProizvod"/>
+    <addaction name="azurirajGProizvod"/>
+    <addaction name="ukloniGProizvod"/>
+    <addaction name="gProizvodPregled"/>
+   </widget>
+   <widget class="QMenu" name="menuMaloprodaja">
+    <property name="title">
+     <string>Maloprodaja</string>
+    </property>
+    <widget class="QMenu" name="menuOtpis">
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="title">
+      <string>Otpis</string>
+     </property>
+     <addaction name="izborProdavca"/>
+    </widget>
+    <addaction name="actionProdaja"/>
+    <addaction name="trebovanjeGProizvoda"/>
+    <addaction name="actionRacunanje_gubitka"/>
+    <addaction name="menuOtpis"/>
+   </widget>
+   <widget class="QMenu" name="menuPomo">
+    <property name="title">
+     <string>Pomoć</string>
+    </property>
+    <addaction name="actionOaplikaciji"/>
+    <addaction name="actionIzlaz"/>
+   </widget>
+   <widget class="QMenu" name="menuLista_proizvoda">
+    <property name="title">
+     <string>Lista proizvoda</string>
+    </property>
+    <addaction name="actionProizvodDodaj"/>
+    <addaction name="actionProizvodUkloni"/>
+    <addaction name="actionAzurirajProizvod"/>
+    <addaction name="actionPregledProizvod"/>
+   </widget>
+   <widget class="QMenu" name="menu_i_enje">
+    <property name="title">
+     <string>Čišćenje</string>
+    </property>
+    <addaction name="isprazniMagacin"/>
+    <addaction name="isprazniProizvode"/>
+    <addaction name="isprazniGotoveProizvode"/>
+   </widget>
+   <widget class="QMenu" name="menuIstorija_izmena">
+    <property name="title">
+     <string>Istorija izmena</string>
+    </property>
+    <addaction name="istorijaIzmenaMagacin"/>
+   </widget>
+   <addaction name="menuMagacin"/>
+   <addaction name="menuLista_proizvoda"/>
+   <addaction name="menuMagacin_gotovih_proizvoda"/>
+   <addaction name="menuMaloprodaja"/>
+   <addaction name="menuIstorija_izmena"/>
+   <addaction name="menuPomo"/>
+   <addaction name="menu_i_enje"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionDodaj_u_magacin">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/add.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Dodaj u magacin</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+D</string>
+   </property>
+  </action>
+  <action name="azuriranjeMagacin">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/update.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Ažuriranje proizvoda u magacinu</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+A</string>
+   </property>
+  </action>
+  <action name="isprazniMagacin">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/trash.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Isprazni magacin sirovina</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+I</string>
+   </property>
+  </action>
+  <action name="pregledMagacina">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/preview.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Pregled magacina</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+P</string>
+   </property>
+  </action>
+  <action name="actionOaplikaciji">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/about.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>O aplikaciji</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+O</string>
+   </property>
+  </action>
+  <action name="actionIzlaz">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/exit.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Izlaz</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+F4</string>
+   </property>
+  </action>
+  <action name="actionProizvodDodaj">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/add.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Dodaj proizvod</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+L</string>
+   </property>
+  </action>
+  <action name="actionAzurirajProizvod">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/update.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Ažuriraj proizvod</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+K</string>
+   </property>
+  </action>
+  <action name="actionProizvodUkloni">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/remove.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Ukloni proizvod</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+U</string>
+   </property>
+  </action>
+  <action name="actionDodaj_proizvod_2">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/add.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Dodaj gotov proizvod</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+N</string>
+   </property>
+  </action>
+  <action name="actionAzuriraj_proizvod_2">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/update.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Ažuriraj gotov proizvod</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Q</string>
+   </property>
+  </action>
+  <action name="actionUkloni_proizvod_2">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/remove.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Ukloni proizvod</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+W</string>
+   </property>
+  </action>
+  <action name="actionTrebovanje">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/request.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Trebovanje</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+T</string>
+   </property>
+  </action>
+  <action name="izborProdavca">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/otpis.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Izbor prodavca</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+J</string>
+   </property>
+  </action>
+  <action name="actionRacunanje_gubitka">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/trebovanje.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Računanje gubitka</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+G</string>
+   </property>
+  </action>
+  <action name="DodajGProizvod">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/add.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Dodaj gotov proizvod</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+S</string>
+   </property>
+  </action>
+  <action name="azurirajGProizvod">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/update.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Ažuriraj gotov proizvod</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+F</string>
+   </property>
+  </action>
+  <action name="ukloniGProizvod">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/remove.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Ukloni gotov proizvod</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+B</string>
+   </property>
+  </action>
+  <action name="actionPregledProizvod">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/preview.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Pregled liste proizvoda</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+C</string>
+   </property>
+  </action>
+  <action name="gProizvodPregled">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/preview.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Pregled magacina</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+H</string>
+   </property>
+  </action>
+  <action name="istorijaIzmenaMagacin">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/snapshot.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Istorija izmena u aplikaciji</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+R</string>
+   </property>
+  </action>
+  <action name="isprazniProizvode">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/trash.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Isprazni magacin proizvoda</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="isprazniGotoveProizvode">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/trash.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Isprazni magacin gotovih proizvoda</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="trebovanjeMagacin">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/trebovanje.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Trebovanje iz magacina</string>
+   </property>
+  </action>
+  <action name="trebovanjeGProizvoda">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Resursi/ikonice/request.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Trebovanje gotovih proizvoda</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionProdaja">
+   <property name="text">
+    <string>Prodaja</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resursi.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,10 +1,10 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2018-10-27T14:01:35
+# Project created by QtCreator 2019-01-07T11:12:34
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -26,16 +26,66 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        prijava_na_sistem.cpp \
-    pocetna.cpp
+        glavniprozor.cpp \
+    magacindodaj.cpp \
+    magacinazuriraj.cpp \
+    konekcija.cpp \
+    magacinpregled.cpp \
+    proizvoddodaj.cpp \
+    proizvodazuriraj.cpp \
+    proizvodpregled.cpp \
+    proizvodukloni.cpp \
+    gproizvoddodaj.cpp \
+    gproizvodazuriraj.cpp \
+    gproizvodukloni.cpp \
+    gproizvodpregled.cpp \
+    istorijaizmenamagacin.cpp \
+    trebovanjemagacin.cpp \
+    trebovanjegproizvod.cpp \
+    otpis.cpp \
+    prodajamaloprodaja.cpp \
+    izborprodavca.cpp
 
 HEADERS += \
-        prijava_na_sistem.h \
-    pocetna.h
+        glavniprozor.h \
+    magacindodaj.h \
+    magacinazuriraj.h \
+    konekcija.h \
+    magacinpregled.h \
+    proizvoddodaj.h \
+    proizvodazuriraj.h \
+    proizvodpregled.h \
+    proizvodukloni.h \
+    gproizvoddodaj.h \
+    gproizvodazuriraj.h \
+    gproizvodukloni.h \
+    gproizvodpregled.h \
+    istorijaizmenamagacin.h \
+    trebovanjemagacin.h \
+    trebovanjegproizvod.h \
+    otpis.h \
+    prodajamaloprodaja.h \
+    izborprodavca.h
 
 FORMS += \
-        prijava_na_sistem.ui \
-    pocetna.ui
+        glavniprozor.ui \
+    magacindodaj.ui \
+    magacinazuriraj.ui \
+    magacinpregled.ui \
+    proizvoddodaj.ui \
+    proizvodazuriraj.ui \
+    proizvodpregled.ui \
+    proizvodukloni.ui \
+    gproizvoddodaj.ui \
+    gproizvodazuriraj.ui \
+    gproizvodukloni.ui \
+    gproizvodpregled.ui \
+    istorijaizmenamagacin.ui \
+    trebovanjemagacin.ui \
+    trebovanjegproizvod.ui \
+    otpis.ui \
+    prodajamaloprodaja.ui \
+    izborprodavca.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

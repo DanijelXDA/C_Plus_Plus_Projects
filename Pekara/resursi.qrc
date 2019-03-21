@@ -1,6 +1,23 @@
 <RCC>
-    <qresource prefix="/data"/>
     <qresource prefix="/">
-        <file>data/bg.jpg</file>
+        <file>Resursi/ikonice/about.png</file>
+        <file>Resursi/ikonice/add.png</file>
+        <file>Resursi/ikonice/exit.png</file>
+        <file>Resursi/ikonice/remove.png</file>
+        <file>Resursi/ikonice/trash.png</file>
+        <file>Resursi/ikonice/update.png</file>
+        <file>Resursi/ikonice/preview.png</file>
+        <file>Resursi/pozadina.jpg</file>
+        <file>Resursi/ikonice/bakery.png</file>
+        <file>Resursi/ikonice/request.png</file>
+        <file>Resursi/ikonice/otpis.png</file>
+        <file>Resursi/ikonice/trebovanje.png</file>
+        <file>Resursi/ikonice/snapshot.png</file>
+        <file>Resursi/Dialozi/ukloni.png</file>
+        <file>Resursi/Dialozi/pregled.png</file>
+        <file>Resursi/Dialozi/dodaj.png</file>
+        <file>Resursi/Dialozi/azuriraj.png</file>
+        <file>Resursi/Dialozi/trebovanje.png</file>
+        <file>Resursi/ikonice/trebuj.png</file>
     </qresource>
 </RCC>
