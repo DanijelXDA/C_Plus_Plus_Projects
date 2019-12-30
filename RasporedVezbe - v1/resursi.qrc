@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/root">
+        <file>SLIKE/about.png</file>
+    </qresource>
+</RCC>
