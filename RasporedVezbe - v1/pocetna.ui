@@ -338,7 +338,7 @@ U</string>
        <rect>
         <x>20</x>
         <y>80</y>
-        <width>361</width>
+        <width>261</width>
         <height>31</height>
        </rect>
       </property>
@@ -521,6 +521,46 @@ po unapred
 definisanom algoritmu.</string>
        </property>
       </widget>
+     </widget>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>80</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>50</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>51</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>52</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>53</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>54</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>55</string>
+       </property>
+      </item>
      </widget>
     </widget>
     <widget class="QWidget" name="oprogramu">

@@ -110,10 +110,7 @@ void Pocetna::on_generisanjeBtn_clicked()
 {
     // GENERISANJE RASPOREDA
     Konekcija baza;
-    QSqlQueryModel *modal = new QSqlQueryModel();
-
     baza.dbOpen();
-
     QSqlQuery upit;
 
     // LOGIKA - RASPOREDJUJ PRIORITETNE KABINETE
@@ -125,8 +122,12 @@ void Pocetna::on_generisanjeBtn_clicked()
 
     upit.exec("SELECT *FROM spisak ORDER BY BrojKabineta DESC");
     upit.first();
-    QString dani[5] = {"PONEDELJAK", "UTORAK", "SREDA", "ČETVRTAK", "PETAK"};
-    int popunjeno = 0, lastPop = 0;
+    // QString dani[5] = {"PONEDELJAK", "UTORAK", "SREDA", "ČETVRTAK", "PETAK"};
+    // 56A
+    // 56 - BROJ KABINETA
+    // A - PONEDELJAK; B - UTORAK; C - SREDA; D - ČETVRTAK; E - PETAK
+    int popunjeno = 0;
+    QString brKDan;
 
     for(int i = 1; i <= len; i++)
     {
@@ -139,24 +140,8 @@ void Pocetna::on_generisanjeBtn_clicked()
 
         QString string = prof + " " + raz + "-" + od + " (Grupa: " + grupa + ")";
 
-        if(popunjeno + brojCasova.toInt() < 7)
-        {
-            // qDebug() << popunjeno + brojCasova.toInt();
-            QSqlQuery upis;
-
-            for(int j = 1; j <= brojCasova.toInt(); j++)
-            {
-                upis.prepare("INSERT INTO PONEDELJAK VALUES(:str);");
-                upis.bindValue(":str", string);
-                upis.exec();
-            }
-            popunjeno += brojCasova.toInt();
-            lastPop += brojCasova.toInt();
-        }
-
-
-        upit.next(); // SLEDEĆI RED U TABELI SPISAK
     }
+    upit.next(); // SLEDEĆI RED U TABELI SPISAK
 
     baza.dbClose();
 }
