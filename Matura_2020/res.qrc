@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resenja.exe</file>
+    </qresource>
+</RCC>
