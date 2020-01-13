@@ -1,0 +1,6 @@
+#ifndef OSOBA_HPP_INCLUDED
+#define OSOBA_HPP_INCLUDED
+
+
+
+#endif // OSOBA_HPP_INCLUDED
