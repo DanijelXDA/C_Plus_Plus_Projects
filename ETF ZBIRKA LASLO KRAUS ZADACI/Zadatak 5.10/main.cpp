@@ -7,28 +7,6 @@ using namespace std;
 
 #define MAX_ISPITA 20
 
-
-
-class Imenik : Osoba
-{
-    private: unsigned kapacitet;
-    public:
-    Imenik() { kapacitet = 0; }
-    /*Imenik& operator+=(const Osoba &o)
-    {
-        if(kapacitet < 10) {
-            this -> ocene = ( this -> ocene + oc);
-            kapacitet++;
-        }
-        else {
-            cout << endl << "POPUNJENA MESTA ZA SVE OCENE! (" << MAX_ISPITA << ")" << endl;
-        }
-
-        return *this;
-
-    } */
-};
-
 int main(void)
 {
     Osoba o1("Danijel", 22), o2("Mau", 25);
