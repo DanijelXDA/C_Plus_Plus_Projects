@@ -17,22 +17,10 @@ class Osoba
             ime = i;
             godine  = j;
         }
-        string getIme()
-        {
-            return ime;
-        }
-        unsigned getGodine()
-        {
-            return godine;
-        }
-        void setIme(string i)
-        {
-            ime = i;
-        }
-        void setGodine(int g)
-        {
-            godine  = g;
-        }
+        string getIme() { return ime; }
+        unsigned getGodine() { return godine; }
+        void setIme(string i) { ime = i; }
+        void setGodine(int g) { godine  = g; }
 
         void operator >(const Osoba& o)
         {
