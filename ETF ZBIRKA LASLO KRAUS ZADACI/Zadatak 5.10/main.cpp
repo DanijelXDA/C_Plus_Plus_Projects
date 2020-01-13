@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+#include "Osoba.hpp"
+
 #define MAX_ISPITA 20
 
 class Student : public Osoba
@@ -50,11 +52,11 @@ class Imenik : Osoba
 {
     private: unsigned kapacitet;
     public:
-        Imenik() { kapacitet = 0; }
-    Imenik& operator+=(const Osoba &o)
+    Imenik() { kapacitet = 0; }
+    /*Imenik& operator+=(const Osoba &o)
     {
         if(kapacitet < 10) {
-      /*      this -> ocene = ( this -> ocene + oc);
+            this -> ocene = ( this -> ocene + oc);
             kapacitet++;
         }
         else {
@@ -62,8 +64,8 @@ class Imenik : Osoba
         }
 
         return *this;
-        */
-    }
+
+    } */
 };
 
 int main(void)
