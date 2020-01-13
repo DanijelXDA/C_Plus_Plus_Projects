@@ -1,6 +1,8 @@
 #ifndef IMENIK_HPP_INCLUDED
 #define IMENIK_HPP_INCLUDED
 
+#include "Student.hpp"
+
 class Imenik : Osoba
 {
     private: unsigned kapacitet;

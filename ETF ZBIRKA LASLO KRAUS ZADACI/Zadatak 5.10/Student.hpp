@@ -1,6 +1,9 @@
 #ifndef STUDENT_HPP_INCLUDED
 #define STUDENT_HPP_INCLUDED
 
+#include "Osoba.hpp"
+#define MAX_ISPITA 20
+
 class Student : public Osoba
 {
     private:

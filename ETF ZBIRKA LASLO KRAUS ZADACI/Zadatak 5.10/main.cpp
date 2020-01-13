@@ -1,11 +1,4 @@
-#include <iostream>
-using namespace std;
-
-#include "Osoba.hpp"
-#include "Student.hpp"
 #include "Imenik.hpp"
-
-#define MAX_ISPITA 20
 
 int main(void)
 {

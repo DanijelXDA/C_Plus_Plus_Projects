@@ -1,6 +1,9 @@
 #ifndef OSOBA_HPP_INCLUDED
 #define OSOBA_HPP_INCLUDED
 
+#include <iostream>
+using namespace std;
+
 class Osoba
 {
     private:
