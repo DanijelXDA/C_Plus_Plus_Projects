@@ -2,6 +2,7 @@
 using namespace std;
 
 #include "Osoba.hpp"
+#include "Student.hpp"
 
 #define MAX_ISPITA 20
 
