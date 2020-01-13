@@ -1,0 +1,6 @@
+#ifndef IMENIK_HPP_INCLUDED
+#define IMENIK_HPP_INCLUDED
+
+
+
+#endif // IMENIK_HPP_INCLUDED
