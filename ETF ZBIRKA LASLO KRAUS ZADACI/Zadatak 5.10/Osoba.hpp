@@ -1,51 +1,38 @@
 #ifndef OSOBA_HPP_INCLUDED
 #define OSOBA_HPP_INCLUDED
 
+#include <string>
 #include <iostream>
 using namespace std;
 
 class Osoba
 {
-    private:
-        string ime;
-        unsigned godine;
-    public:
-        Osoba()
-        {
-            ime = "";
-            godine = 0;
-        }
-        Osoba(string i, int j)
-        {
-            ime = i;
-            godine  = j;
-        }
-        string getIme() { return ime; }
-        unsigned getGodine() { return godine; }
-        void setIme(string i) { ime = i; }
-        void setGodine(int g) { godine  = g; }
+    string ime;                             // Ime osobe.
+    int god;                                // Godine starosti.
+public:
+    Osoba(string ii, int gg)                // Stvaranje objekta.
+    {
+        ime = ii;
+        god = gg;
+    }
+    Osoba(const Osoba&) =delete;            // Ne sme da se kopira.
+    Osoba& operator=(const Osoba&) =delete; // Ne sme da se dodeljuje.
+    virtual ~Osoba() {}                     // Virtuelan destruktor.
+    friend bool operator>(const Osoba& o1,  // Da li je starija?
+                          const Osoba& o2)
+    {
+        return o1.god > o2.god;
+    }
 
-        void operator >(const Osoba& o)
-        {
-            if(godine > o.godine)
-            {
-                cout << "Osoba " << ime << "(" << godine << ") je starija od "
-                     << "Osobe " << o.ime << "(" << o.godine << ")" << endl;
-            }
-            else
-            {
-                cout << "Osoba " << o.ime << "(" << o.godine << ") je starija od "
-                     << "Osobe " << ime << "(" << godine << ")" << endl;
-            }
-        }
-
-        friend ostream &operator<<( ostream &out, const Osoba &o)
-        {
-            /// ISPIS
-            cout << o.ime << " (" << o.godine << ")" << endl;
-
-            return out;
-        }
+protected:
+    virtual void pisi(ostream& it) const    // Pisanje osobe.
+    {
+        it << ime << '(' << god << ')';
+    }
+    friend ostream& operator<<(ostream& it, const Osoba& oso)
+    {
+        oso.pisi(it);
+        return it;
+    }
 };
-
 #endif // OSOBA_HPP_INCLUDED

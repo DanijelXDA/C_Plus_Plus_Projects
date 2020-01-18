@@ -1,0 +1,20 @@
+% imenik2t
+Vrsta (O, S, .)? o
+Ime? Marko
+Godine? 35
+Vrsta (O, S, .)? s
+Ime? Zoran
+Godine? 22
+Ocena? 7
+Ocena? 5
+Ocena? 8
+Ocena? 9
+Ocena? 0
+Vrsta (O, S, .)? o
+Ime? Stevan
+Godine? 28
+Vrsta (O, S, .)? .
+
+Marko(35)
+Stevan(28)
+Zoran(22)/8
