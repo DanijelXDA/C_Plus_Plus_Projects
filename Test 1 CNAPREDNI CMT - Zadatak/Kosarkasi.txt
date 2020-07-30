@@ -1,0 +1,6 @@
+1 Petar Petrovic Partizan 20 4
+2 Milan Milanoviæ Radnièki 30 4
+3 Bojan Bojanoviæ Partizan 20 4
+4 Jovana Jovanovic Vojvodina 10 4
+5 Marko Markovic Crvena_Zvezda 20 4
+6 Danijel Jovanovic Partizan 30 6
