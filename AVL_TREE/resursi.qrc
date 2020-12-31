@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resursi/bg.jpg</file>
+        <file>resursi/info.png</file>
+        <file>resursi/delete.png</file>
+        <file>resursi/pozadina.jpg</file>
+        <file>resursi/switch.png</file>
+        <file>resursi/animacija.gif</file>
+        <file>resursi/poz.jpg</file>
+        <file>resursi/poz-dark.jpg</file>
+    </qresource>
+</RCC>
