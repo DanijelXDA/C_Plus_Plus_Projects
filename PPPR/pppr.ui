@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PPPR</class>
+ <widget class="QMainWindow" name="PPPR">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>755</width>
+    <height>488</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>755</width>
+    <height>488</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>755</width>
+    <height>488</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Source Code Pro</family>
+    <pointsize>12</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>PPPR | Main Window</string>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="cw">
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#cw{border-image: url(:/img/poz.jpg) ;}</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QGroupBox" name="gb">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::DefaultContextMenu</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#gb {
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 25px;
+}</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <widget class="QGroupBox" name="dodaj">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>12</y>
+         <width>232</width>
+         <height>441</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: rgb(190, 15, 30);
+	border: 1px solid #fff;
+	border-radius: 25px;</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QPushButton" name="d2">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>110</y>
+          <width>151</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Trebuchet MS</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: url(:/img/g3.png) no-repeat rgb(190, 15, 30);
+border: 0px solid #fff;
+color: #fff;</string>
+        </property>
+        <property name="text">
+         <string>
+
+
+
+
+DODAJ
+PROIZVOD</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="racun">
+       <property name="geometry">
+        <rect>
+         <x>489</x>
+         <y>12</y>
+         <width>232</width>
+         <height>441</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#racun {
+	background-color: rgb(115, 132, 154);
+	border: 1px solid #fff;
+	border-radius: 25px;
+}</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QPushButton" name="d2_3">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>110</y>
+          <width>151</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Trebuchet MS</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: url(:/img/g1.png) no-repeat rgb(115, 132, 154);
+border: 0px solid #fff;
+color: #fff;</string>
+        </property>
+        <property name="text">
+         <string>
+
+
+
+
+PRESEK
+STANJA</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="kasa">
+       <property name="geometry">
+        <rect>
+         <x>251</x>
+         <y>12</y>
+         <width>231</width>
+         <height>441</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#kasa {
+	background-color: rgb(255, 135, 83);
+	border: 1px solid #fff;
+	border-radius: 25px;
+}</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QPushButton" name="d2_2">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>110</y>
+          <width>151</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Trebuchet MS</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: url(:/img/g2.png) no-repeat rgb(255, 135, 83);
+border: 0px solid #fff;
+color: #fff;</string>
+        </property>
+        <property name="text">
+         <string>
+
+
+
+
+KASA</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
